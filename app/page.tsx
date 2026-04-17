@@ -1,4 +1,5 @@
 import WaitlistForm from "./waitlist-form";
+import FaqAccordion from "./faq-accordion";
 
 const DELIVERABLES = [
   {
@@ -94,6 +95,43 @@ export default function Home() {
           <span>📊 6 research dimensions per report</span>
           <span>⏱ 48-hour turnaround</span>
           <span>🔒 Notion workspace + PDF delivered to your inbox</span>
+        </div>
+      </section>
+
+      {/* Who This Is For */}
+      <section className="py-20 px-6 max-w-4xl mx-auto w-full">
+        <h2 className="text-3xl font-bold text-center mb-10">Who this is for</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-6">
+            <h3 className="font-bold text-indigo-700 mb-4">This is for you if…</h3>
+            <ul className="space-y-3 text-sm text-gray-700">
+              {[
+                "You have a business idea but aren't sure if the market is real",
+                "You've wasted time building something nobody wanted and want a smarter starting point",
+                "You want research-backed confidence before investing weeks of effort",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="text-indigo-600 mt-0.5 shrink-0">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+            <h3 className="font-bold text-gray-500 mb-4">Not for you if…</h3>
+            <ul className="space-y-3 text-sm text-gray-500">
+              {[
+                "You've already launched and have real paying customers",
+                "You need a full go-to-market strategy or investor deck",
+                "You want someone to tell you your idea is great regardless of the data",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="text-gray-400 mt-0.5 shrink-0">✗</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -217,6 +255,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-20 px-6 max-w-2xl mx-auto w-full">
+        <h2 className="text-3xl font-bold text-center mb-10">Frequently asked questions</h2>
+        <FaqAccordion />
+      </section>
+
+      {/* Guarantee */}
+      <section className="bg-indigo-50 border-y border-indigo-100 py-16 px-6 text-center">
+        <div className="max-w-xl mx-auto">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-indigo-500 bg-white text-2xl mb-6 shadow-sm">
+            🛡️
+          </div>
+          <h2 className="text-2xl font-bold text-gray-900">30-day money-back guarantee</h2>
+          <p className="mt-4 text-gray-600">
+            No questions asked. If the report does not meet your expectations within 30 days of delivery, we will give you a full refund.
+          </p>
+        </div>
+      </section>
+
       {/* CTA / Order */}
       <section
         id="order"
@@ -234,7 +291,7 @@ export default function Home() {
           <WaitlistForm ctaLabel="Validate My Niche — Starting at $49" dark />
         </div>
         <p className="text-gray-400 text-sm mt-4">
-          No spam. Unsubscribe any time.
+          30-day money-back guarantee · Delivered in 48 hours · No subscription
         </p>
       </section>
 
