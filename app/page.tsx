@@ -85,7 +85,7 @@ export default function Home() {
           <WaitlistForm ctaLabel="Validate My Niche — Starting at $49" />
         </div>
         <p className="text-sm text-gray-600 mt-4">
-          Enter your email to get early access · First reports shipping now
+          30-day money-back guarantee · No subscription · Delivered in 48 hours
         </p>
       </section>
 
