@@ -4,32 +4,24 @@ import { useState } from 'react';
 
 const FAQS = [
   {
-    q: "What's in the 6-dimension analysis?",
-    a: "Market size, competition, monetization potential, demand signals, trend direction, and content gap — each covered in depth with data and a plain-English summary.",
+    q: "What do I get exactly?",
+    a: "A structured report covering: market size estimate, 3–5 direct competitors, buyer language analysis, key objections, and a go/no-go recommendation with rationale.",
   },
   {
-    q: 'How do I submit my niche?',
-    a: 'A short intake form appears after purchase — takes 5 minutes. Just describe the niche in a sentence or two. We do the rest.',
+    q: "Is this AI-generated?",
+    a: "No. We use AI tools as part of our research workflow, but the output is reviewed and written by a human analyst.",
   },
   {
-    q: 'What format is the report?',
-    a: 'PDF (8–15 pages) designed for readability, plus a Notion workspace so you can navigate and build on the research.',
+    q: "What kind of ideas can you validate?",
+    a: "Products, SaaS ideas, service businesses, content niches, freelance offers — anything you're considering building or selling.",
   },
   {
-    q: 'Can I request a revision?',
-    a: 'Yes — within 7 days of delivery, if something was missed or unclear, we will revise it.',
+    q: "What if the verdict is \"no-go\"?",
+    a: "That's the point. Saving 12 months on a bad idea is worth $97.",
   },
   {
-    q: 'Is this AI-only or human-reviewed?',
-    a: 'Both. AI structures and aggregates the data; a human analyst reviews the output and writes the final recommendation.',
-  },
-  {
-    q: 'What if the report says my niche is bad?',
-    a: "That's the most valuable outcome — you just saved months of wasted effort. We give you the honest verdict, not what you want to hear.",
-  },
-  {
-    q: 'What is your refund policy?',
-    a: '30-day full refund, no questions asked. If the report does not meet your expectations, we will give you your money back.',
+    q: "Do you keep my idea confidential?",
+    a: "Yes. We do not share, publish, or reference client ideas.",
   },
 ];
 

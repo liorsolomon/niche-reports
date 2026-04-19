@@ -1,55 +1,36 @@
 import WaitlistForm from "./waitlist-form";
 import FaqAccordion from "./faq-accordion";
 
-const DELIVERABLES = [
+const WHY = [
   {
-    icon: "🔍",
-    title: "Competitor Landscape",
-    description:
-      "A mapped overview of the top 5–8 direct and indirect competitors in your niche — what they charge, how they position, and where the gaps are.",
+    title: "48-hour turnaround.",
+    description: "Not a week. Not \"we'll get back to you.\" 48 hours.",
   },
   {
-    icon: "📈",
-    title: "Demand Signals",
-    description:
-      "Search volume trends, community activity, and keyword data that show whether people are actively looking for what you want to build.",
+    title: "One-time fee.",
+    description: "DimeADozen charges $39–$59 for AI-only output. We commit human analysis, market research, and a real recommendation.",
   },
   {
-    icon: "💰",
-    title: "Pricing Benchmarks",
-    description:
-      "A clear pricing range across the market — from free to premium — so you can position and price with confidence from day one.",
-  },
-  {
-    icon: "🎯",
-    title: "ICP Profile",
-    description:
-      "A detailed Ideal Customer Profile: who they are, what they're struggling with, where they hang out, and what they'll pay for a solution.",
-  },
-  {
-    icon: "⚡",
-    title: "Opportunity Score",
-    description:
-      "A plain-English verdict on niche viability — high, medium, or low — with the reasoning behind it so you can decide whether to proceed.",
-  },
-  {
-    icon: "📄",
-    title: "Notion + PDF Bundle",
-    description:
-      "The full report in a clean, navigable Notion workspace plus a shareable PDF — ready to use as your research foundation or co-founder deck.",
+    title: "Go/no-go you can actually use.",
+    description: "Not a 40-page PDF you ignore. A clear verdict with supporting data and a next-step recommendation.",
   },
 ];
 
-const TESTIMONIALS = [
+const HOW_IT_WORKS = [
   {
-    quote:
-      "I spent two weeks doing this research manually for my last project and still felt uncertain. With this report I had a clear yes/no in 48 hours. Completely changed how I approach validation.",
-    name: "— James K., Indie Hacker",
+    step: "01",
+    title: "Submit your idea",
+    description: "Product, service, niche — any stage. One or two sentences is enough.",
   },
   {
-    quote:
-      "The ICP profile alone was worth $49. I've been guessing at my target customer for months. This gave me a concrete profile I could actually write copy for.",
-    name: "— Priya S., Solopreneur",
+    step: "02",
+    title: "We research it",
+    description: "We research market demand, competitors, and buyer language.",
+  },
+  {
+    step: "03",
+    title: "You get your report",
+    description: "A structured validation report within 48 hours.",
   },
 ];
 
@@ -58,199 +39,83 @@ export default function Home() {
     <div className="flex flex-col min-h-screen font-[var(--font-geist-sans)]">
       {/* Nav */}
       <nav className="border-b border-gray-100 px-6 py-4 flex items-center justify-between max-w-5xl mx-auto w-full">
-        <div className="font-bold text-lg tracking-tight">3vo Niche Reports</div>
+        <div className="font-bold text-lg tracking-tight">validate.3vo.ai</div>
         <a
-          href="#order"
+          href="#get-it"
           className="bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-indigo-700 transition-colors"
         >
-          Validate My Niche
+          Get it — $97
         </a>
       </nav>
 
       {/* Hero */}
       <section className="flex flex-col items-center text-center px-6 pt-24 pb-20 max-w-3xl mx-auto">
         <div className="inline-block bg-indigo-50 border border-indigo-200 text-indigo-800 text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-wider">
-          AI-Powered · Delivered in 48 Hours · Starting at $49
+          Human-reviewed · 48-hour turnaround · $97 one-time
         </div>
         <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-gray-900">
-          Validate Your Niche in 48 Hours{" "}
-          <span className="text-indigo-600">— Not 48 Days</span>
+          Know if your idea is worth building —{" "}
+          <span className="text-indigo-600">before you spend a year finding out.</span>
         </h1>
         <p className="text-xl text-gray-600 max-w-xl mb-10 leading-relaxed">
-          Stop guessing. Get a structured market validation report for your niche —
-          competitors, demand signals, pricing benchmarks, and an ICP profile —
-          delivered as a Notion + PDF bundle. Starting at $49.
+          We run a full 48-hour validation sprint: market size, competitive landscape, real buyer
+          signals, and a clear go/no-go call. One-time. No subscription.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 items-center justify-center w-full max-w-md">
-          <WaitlistForm ctaLabel="Validate My Niche — Starting at $49" />
+        <div className="flex flex-col sm:flex-row gap-3 items-center justify-center w-full max-w-md" id="get-it">
+          <WaitlistForm ctaLabel="Get it — $97" />
         </div>
-        <p className="text-sm text-gray-600 mt-4">
-          30-day money-back guarantee · No subscription · Delivered in 48 hours
+        <p className="text-sm text-gray-500 mt-4">
+          $97 — one-time · No subscription · Delivered in 48 hours
         </p>
       </section>
 
-      {/* Social proof bar */}
-      <section className="bg-gray-50 border-y border-gray-100 py-6">
-        <div className="max-w-3xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-8 text-center text-sm text-gray-600 font-medium">
-          <span>📊 6 research dimensions per report</span>
-          <span>⏱ 48-hour turnaround</span>
-          <span>🔒 Notion workspace + PDF delivered to your inbox</span>
-        </div>
-      </section>
-
-      {/* Who This Is For */}
-      <section className="py-20 px-6 max-w-4xl mx-auto w-full">
-        <h2 className="text-3xl font-bold text-center mb-10">Who this is for</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-6">
-            <h3 className="font-bold text-indigo-700 mb-4">This is for you if…</h3>
-            <ul className="space-y-3 text-sm text-gray-700">
-              {[
-                "You have a business idea but aren't sure if the market is real",
-                "You've wasted time building something nobody wanted and want a smarter starting point",
-                "You want research-backed confidence before investing weeks of effort",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="text-indigo-600 mt-0.5 shrink-0">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+      {/* Why validate.3vo.ai */}
+      <section className="py-20 px-6 bg-indigo-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why validate.3vo.ai</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {WHY.map((item) => (
+              <div
+                key={item.title}
+                className="bg-white border border-indigo-100 rounded-2xl p-6 shadow-sm"
+              >
+                <h3 className="font-bold text-indigo-700 mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+              </div>
+            ))}
           </div>
-          <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
-            <h3 className="font-bold text-gray-500 mb-4">Not for you if…</h3>
-            <ul className="space-y-3 text-sm text-gray-500">
-              {[
-                "You've already launched and have real paying customers",
-                "You need a full go-to-market strategy or investor deck",
-                "You want someone to tell you your idea is great regardless of the data",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5 shrink-0">✗</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* What's in the report */}
-      <section className="py-24 px-6 max-w-5xl mx-auto w-full">
-        <h2 className="text-3xl font-bold text-center mb-4">
-          Everything you need to decide — in one report
-        </h2>
-        <p className="text-gray-600 text-center mb-16 max-w-xl mx-auto">
-          Each report covers six key dimensions of niche viability. No fluff,
-          no filler — just the research that actually drives decisions.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {DELIVERABLES.map((d) => (
-            <div
-              key={d.title}
-              className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="text-3xl mb-3">{d.icon}</div>
-              <h3 className="font-semibold text-lg mb-2">{d.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {d.description}
-              </p>
-            </div>
-          ))}
         </div>
       </section>
 
       {/* How it works */}
-      <section className="bg-indigo-50 py-20 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">How it works</h2>
-          <p className="text-gray-600 mb-16 max-w-xl mx-auto">
-            Three steps. 48 hours. A clear answer on whether your niche is worth
-            building in.
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">How it works</h2>
+          <p className="text-gray-600 mb-14 max-w-xl mx-auto">
+            Three steps. 48 hours. A clear answer on whether your idea is worth building.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-indigo-100">
-              <div className="text-3xl font-bold text-indigo-600 mb-4">01</div>
-              <h3 className="font-semibold text-lg mb-2">Submit your niche</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Tell us the niche you want to validate — one or two sentences is
-                enough. We handle the rest.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-indigo-100">
-              <div className="text-3xl font-bold text-indigo-600 mb-4">02</div>
-              <h3 className="font-semibold text-lg mb-2">We research it</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Our AI scans competitors, demand data, pricing, and buyer communities
-                — then a human reviews the output for accuracy.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-indigo-100">
-              <div className="text-3xl font-bold text-indigo-600 mb-4">03</div>
-              <h3 className="font-semibold text-lg mb-2">You get your report</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                In 48 hours or less, your full report lands in your inbox as a
-                Notion workspace link + PDF download.
-              </p>
-            </div>
+            {HOW_IT_WORKS.map((s) => (
+              <div key={s.step} className="bg-white border border-indigo-100 rounded-2xl p-8 shadow-sm">
+                <div className="text-3xl font-bold text-indigo-600 mb-4">{s.step}</div>
+                <h3 className="font-semibold text-lg mb-2">{s.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{s.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {TESTIMONIALS.map((t) => (
-            <blockquote
-              key={t.name}
-              className="bg-indigo-50 rounded-2xl p-8 shadow-sm border border-indigo-100"
-            >
-              <p className="text-gray-700 leading-relaxed mb-4">
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <footer className="text-sm font-semibold text-gray-600">
-                {t.name}
-              </footer>
-            </blockquote>
-          ))}
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="py-24 px-6 max-w-2xl mx-auto text-center w-full">
-        <h2 className="text-3xl font-bold mb-4">Simple, flat pricing</h2>
-        <p className="text-gray-600 mb-12">
-          Pay per report. No subscription, no lock-in.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="border border-gray-200 rounded-2xl p-8 text-left">
-            <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">
-              Solo Report
-            </div>
-            <div className="text-4xl font-bold mb-1">$49</div>
-            <div className="text-gray-600 text-sm mb-6">per report</div>
-            <ul className="text-sm text-gray-600 space-y-2">
-              <li>✓ Full 6-section validation report</li>
-              <li>✓ Notion workspace + PDF</li>
-              <li>✓ Delivered in 48 hours</li>
-              <li>✓ One niche per report</li>
-            </ul>
+      {/* Market context */}
+      <section className="bg-gray-50 border-y border-gray-100 py-16 px-6">
+        <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 text-center">
+          <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+            <div className="text-4xl font-bold text-indigo-600 mb-2">90%</div>
+            <p className="text-gray-600 text-sm">of startups fail due to &ldquo;no market need&rdquo; <span className="text-gray-400">(CB Insights, 2023)</span></p>
           </div>
-          <div className="border-2 border-indigo-500 rounded-2xl p-8 text-left relative">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
-              BEST VALUE
-            </div>
-            <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">
-              3-Report Bundle
-            </div>
-            <div className="text-4xl font-bold mb-1">$119</div>
-            <div className="text-gray-600 text-sm mb-6">3 reports · $40 each</div>
-            <ul className="text-sm text-gray-600 space-y-2">
-              <li>✓ Everything in Solo</li>
-              <li>✓ Test 3 niches in parallel</li>
-              <li>✓ Side-by-side comparison guide</li>
-              <li>✓ Priority delivery</li>
-            </ul>
+          <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+            <div className="text-4xl font-bold text-indigo-600 mb-2">2×</div>
+            <p className="text-gray-600 text-sm">faster shipping for founders who validate before building, on average</p>
           </div>
         </div>
       </section>
@@ -261,53 +126,30 @@ export default function Home() {
         <FaqAccordion />
       </section>
 
-      {/* Guarantee */}
-      <section className="bg-indigo-50 border-y border-indigo-100 py-16 px-6 text-center">
-        <div className="max-w-xl mx-auto">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-indigo-500 bg-white text-2xl mb-6 shadow-sm">
-            🛡️
-          </div>
-          <h2 className="text-2xl font-bold text-gray-900">30-day money-back guarantee</h2>
-          <p className="mt-4 text-gray-600">
-            No questions asked. If the report does not meet your expectations within 30 days of delivery, we will give you a full refund.
-          </p>
-        </div>
-      </section>
-
-      {/* CTA / Order */}
+      {/* CTA */}
       <section
         id="order"
         className="bg-gray-900 text-white py-24 px-6 text-center"
       >
         <h2 className="text-4xl font-bold mb-4">
-          Stop second-guessing. Start validating.
+          Stop guessing. Start validating.
         </h2>
         <p className="text-gray-400 mb-10 max-w-md mx-auto">
-          Get your structured market validation report in 48 hours — competitors,
-          demand signals, pricing benchmarks, and ICP — delivered as a Notion +
-          PDF bundle.
+          Get a structured go/no-go verdict on your idea — with market size, competitors, buyer
+          language, and a clear recommendation — in 48 hours.
         </p>
         <div className="max-w-md mx-auto">
-          <WaitlistForm ctaLabel="Validate My Niche — Starting at $49" dark />
+          <WaitlistForm ctaLabel="Get it — $97" dark />
         </div>
         <p className="text-gray-400 text-sm mt-4">
-          30-day money-back guarantee · Delivered in 48 hours · No subscription
+          $97 — one-time · No subscription · Delivered in 48 hours
         </p>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-100 py-8 px-6 text-center text-sm text-gray-600">
-        <p>© 2026 3vo Niche Reports · AI-powered market validation for indie founders</p>
-        <p className="mt-2">
-          <a
-            href="https://x.com/3voai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-600 transition-colors"
-          >
-            Follow us on X @3voai
-          </a>
-        </p>
+      <footer className="border-t border-gray-100 py-8 px-6 text-center text-sm text-gray-500">
+        <p>© 2026 validate.3vo.ai</p>
+        <p className="mt-2">— The 3vo.ai team</p>
       </footer>
     </div>
   );
