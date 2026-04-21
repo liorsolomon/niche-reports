@@ -9,6 +9,8 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://validate.3vo.ai"),
   title: "AI Niche Market Validation Reports — Validate Your Niche in 48 Hours",
@@ -33,6 +35,7 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+  ...(googleVerification ? { verification: { google: googleVerification } } : {}),
 };
 
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID;
