@@ -1,5 +1,6 @@
 import WaitlistForm from "./waitlist-form";
 import FaqAccordion from "./faq-accordion";
+import NichePreview from "./niche-preview";
 
 const WHY = [
   {
@@ -19,18 +20,18 @@ const WHY = [
 const HOW_IT_WORKS = [
   {
     step: "01",
-    title: "Submit your idea",
-    description: "Product, service, niche — any stage. One or two sentences is enough.",
+    title: "Preview your niche",
+    description: "Type your niche above and instantly see demand signal, top competitors, and what your full report would cover.",
   },
   {
     step: "02",
     title: "We research it",
-    description: "We research market demand, competitors, and buyer language.",
+    description: "We run a full validation sprint: market size, competitive landscape, buyer language, and ICP profile.",
   },
   {
     step: "03",
     title: "You get your report",
-    description: "A structured validation report within 48 hours.",
+    description: "A structured 6-dimension validation report within 48 hours. One-time. No subscription.",
   },
 ];
 
@@ -44,28 +45,39 @@ export default function Home() {
           href="#get-it"
           className="bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-indigo-700 transition-colors"
         >
-          Get it — $97
+          Get it — $49
         </a>
       </nav>
 
       {/* Hero */}
       <section className="flex flex-col items-center text-center px-6 pt-24 pb-20 max-w-3xl mx-auto">
         <div className="inline-block bg-indigo-50 border border-indigo-200 text-indigo-800 text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-wider">
-          Human-reviewed · 48-hour turnaround · $97 one-time
+          AI-powered · 48-hour turnaround · $49 one-time
         </div>
         <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-gray-900">
           Know if your idea is worth building —{" "}
           <span className="text-indigo-600">before you spend a year finding out.</span>
         </h1>
-        <p className="text-xl text-gray-600 max-w-xl mb-10 leading-relaxed">
+        <p className="text-xl text-gray-600 max-w-xl mb-8 leading-relaxed">
           We run a full 48-hour validation sprint: market size, competitive landscape, real buyer
           signals, and a clear go/no-go call. One-time. No subscription.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 items-center justify-center w-full max-w-md" id="get-it">
-          <WaitlistForm ctaLabel="Get it — $97" />
+
+        {/* Niche Preview — primary CTA */}
+        <div className="w-full mb-6" id="get-it">
+          <p className="text-sm text-gray-500 mb-4">
+            Try it — type your niche and see your demand signal instantly:
+          </p>
+          <NichePreview />
+        </div>
+
+        {/* Email capture — secondary */}
+        <div className="w-full max-w-md mt-2">
+          <p className="text-xs text-gray-400 mb-3">Or leave your email and we&apos;ll reach out:</p>
+          <WaitlistForm ctaLabel="Join the list" />
         </div>
         <p className="text-sm text-gray-500 mt-4">
-          $97 — one-time · No subscription · Delivered in 48 hours
+          $49 — one-time · No subscription · Delivered in 48 hours
         </p>
       </section>
 
@@ -138,11 +150,11 @@ export default function Home() {
           Get a structured go/no-go verdict on your idea — with market size, competitors, buyer
           language, and a clear recommendation — in 48 hours.
         </p>
-        <div className="max-w-md mx-auto">
-          <WaitlistForm ctaLabel="Get it — $97" dark />
+        <div className="max-w-xl mx-auto">
+          <NichePreview />
         </div>
-        <p className="text-gray-400 text-sm mt-4">
-          $97 — one-time · No subscription · Delivered in 48 hours
+        <p className="text-gray-400 text-sm mt-6">
+          $49 — one-time · No subscription · Delivered in 48 hours
         </p>
       </section>
 
