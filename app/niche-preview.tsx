@@ -393,7 +393,7 @@ const DEMAND_BADGE: Record<DemandLevel, string> = {
   Low: "bg-red-100 text-red-700 border-red-200",
 };
 
-const PAYMENT_LINK = process.env.NEXT_PUBLIC_PAYMENT_LINK || "";
+const PAYMENT_LINK = process.env.NEXT_PUBLIC_PAYMENT_LINK || 'https://buy.stripe.com/00waEWcDe5gwaD5gBQfMA02';
 
 function lookupNiche(input: string): NicheResult {
   const lower = input.toLowerCase().trim();

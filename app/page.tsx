@@ -42,7 +42,9 @@ export default function Home() {
       <nav className="border-b border-gray-100 px-6 py-4 flex items-center justify-between max-w-5xl mx-auto w-full">
         <div className="font-bold text-lg tracking-tight">validate.3vo.ai</div>
         <a
-          href="#get-it"
+          href="https://buy.stripe.com/00waEWcDe5gwaD5gBQfMA02"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-indigo-700 transition-colors"
         >
           Get it — $49
