@@ -22,6 +22,7 @@ export default function Image() {
       >
         <div
           style={{
+            display: "flex",
             background: "#eef2ff",
             border: "2px solid #818cf8",
             borderRadius: "12px",
@@ -38,6 +39,7 @@ export default function Image() {
         </div>
         <div
           style={{
+            display: "flex",
             fontSize: "64px",
             fontWeight: 800,
             color: "#111827",
@@ -46,11 +48,11 @@ export default function Image() {
             marginBottom: "24px",
           }}
         >
-          Validate Your Niche in 48 Hours{" "}
-          <span style={{ color: "#4f46e5" }}>— Not 48 Days</span>
+          Validate Your Niche in 48 Hours — Not 48 Days
         </div>
         <div
           style={{
+            display: "flex",
             fontSize: "24px",
             color: "#6b7280",
             textAlign: "center",
@@ -61,6 +63,7 @@ export default function Image() {
         </div>
         <div
           style={{
+            display: "flex",
             marginTop: "40px",
             fontSize: "20px",
             color: "#9ca3af",
